@@ -31,3 +31,15 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Documentos cargados por usuarios
+/uploads/
+
+# Archivos de prueba con posibles credenciales
+/login_test.json
+/register_test.json
+
+# Configuracion local con credenciales
+.env
+.env.*
+!.env.example

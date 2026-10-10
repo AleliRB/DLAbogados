@@ -1,0 +1,17 @@
+package com.dlabogados.cita.entity;
+
+public enum EstadoCita {
+    PENDIENTE_PAGO,
+    PENDIENTE_CONFIRMACION,
+    PENDIENTE,
+    CONFIRMADA,
+    REPROGRAMACION_SOLICITADA,
+    REPROGRAMADA,
+    EN_ATENCION,
+    ATENDIDA,
+    CANCELADA_CLIENTE,
+    CANCELADA_ESTUDIO,
+    CANCELADA,
+    NO_ASISTIO,
+    RECHAZADA
+}
