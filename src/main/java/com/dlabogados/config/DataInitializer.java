@@ -95,11 +95,6 @@ public class DataInitializer implements CommandLineRunner {
                     .rol(rolAdmin)
                     .activo(true)
                     .build());
-        } else {
-            Usuario admin = usuarioRepository.findByEmail("admin@dlabogados.com").get();
-            admin.setPassword(passwordEncoder.encode("Admin123!"));
-            admin.setActivo(true);
-            usuarioRepository.save(admin);
         }
 
         // 5. Abogado 1 (Dr. Carlos Mendoza)
@@ -113,9 +108,6 @@ public class DataInitializer implements CommandLineRunner {
                     .build());
         } else {
             userAbogado1 = usuarioRepository.findByEmail("carlos.mendoza@dlabogados.com").get();
-            userAbogado1.setPassword(passwordEncoder.encode("Abogado123!"));
-            userAbogado1.setActivo(true);
-            usuarioRepository.save(userAbogado1);
         }
 
         Abogado abogado1 = abogadoRepository.findByUsuarioId(userAbogado1.getId())
@@ -142,9 +134,6 @@ public class DataInitializer implements CommandLineRunner {
                     .build());
         } else {
             userAbogado2 = usuarioRepository.findByEmail("ana.torres@dlabogados.com").get();
-            userAbogado2.setPassword(passwordEncoder.encode("Abogado123!"));
-            userAbogado2.setActivo(true);
-            usuarioRepository.save(userAbogado2);
         }
 
         if (!abogadoRepository.findByUsuarioId(userAbogado2.getId()).isPresent()) {
@@ -172,9 +161,6 @@ public class DataInitializer implements CommandLineRunner {
                     .build());
         } else {
             userCliente1 = usuarioRepository.findByEmail("juan.perez@gmail.com").get();
-            userCliente1.setPassword(passwordEncoder.encode("Cliente123!"));
-            userCliente1.setActivo(true);
-            usuarioRepository.save(userCliente1);
         }
 
         Cliente cliente1 = clienteRepository.findByUsuarioId(userCliente1.getId())
